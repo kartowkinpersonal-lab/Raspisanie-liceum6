@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Школьное расписание — 6 уроков</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Расписание — 6 уроков в день</h1>
+    <p class="subtitle">Интерактивное расписание. Нажмите на день, чтобы изменить предметы.</p>
+  </header>
+
+  <main class="container">
+    <div class="controls">
+      <label>Количество уроков в день:
+        <select id="lessonsCount">
+          <option value="6" selected>6</option>
+          <option value="5">5</option>
+          <option value="7">7</option>
+        </select>
+      </label>
+      <button id="downloadJson">Скачать JSON</button>
+      <button id="resetBtn">Сбросить</button>
+    </div>
+
+    <div id="schedule" class="schedule-grid" aria-live="polite">
+      <!-- Карточки дней генерируются скриптом -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Сайт сгенерирован автоматически. Репозиторий содержит скрипт генерации и инструкции для GitHub.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
